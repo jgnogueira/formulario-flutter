@@ -14,29 +14,42 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Cadastrando produto'),
         ),
-        body: Column(
-          children: <Widget>[
-            TextField(
-              controller: _controladorNome,
-            ),
-            TextField(
-              controller: _controladorQuantidade,
-            ),
-            TextField(
-              controller: _controladorValor,
-            ),
-            RaisedButton(
-              onPressed: () {
-                final String nome = _controladorNome.text;
-                final int quantidade =
-                    int.tryParse(_controladorQuantidade.text);
-                final double valor = double.tryParse(_controladorValor.text);
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: <Widget>[
+              TextField(
+                controller: _controladorNome,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 16.0),
+                child: TextField(
+                  controller: _controladorQuantidade,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 16.0),
+                child: TextField(
+                  controller: _controladorValor,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 16.0),
+                child: RaisedButton(
+                  onPressed: () {
+                    final String nome = _controladorNome.text;
+                    final int quantidade =
+                        int.tryParse(_controladorQuantidade.text);
+                    final double valor =
+                        double.tryParse(_controladorValor.text);
 
-                _criarProduto(nome, quantidade, valor);
-              },
-              child: Text('Salvar'),
-            )
-          ],
+                    _criarProduto(nome, quantidade, valor);
+                  },
+                  child: Text('Salvar'),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
