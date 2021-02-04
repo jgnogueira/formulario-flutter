@@ -16,6 +16,12 @@ class MyApp extends StatelessWidget {
             TextField(),
             TextField(),
             TextField(),
+            RaisedButton(
+              onPressed: () {
+                print('clique');
+              },
+              child: Text('Salvar'),
+            )
           ],
         ),
       ),
