@@ -21,12 +21,14 @@ class MyApp extends StatelessWidget {
               TextField(
                 controller: _controladorNome,
                 decoration: InputDecoration(labelText: 'Nome'),
+                keyboardType: TextInputType.text,
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 16.0),
                 child: TextField(
                   controller: _controladorQuantidade,
                   decoration: InputDecoration(labelText: 'Quantidade'),
+                  keyboardType: TextInputType.number,
                 ),
               ),
               Padding(
@@ -34,6 +36,7 @@ class MyApp extends StatelessWidget {
                 child: TextField(
                   controller: _controladorValor,
                   decoration: InputDecoration(labelText: 'Valor'),
+                  keyboardType: TextInputType.number,
                 ),
               ),
               Padding(
